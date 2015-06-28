@@ -1,13 +1,13 @@
 {
-  "name": "node-express-mongoose",
-  "description": "A boilerplate application for express mongoose",
+  "name": "men-template",
+  "description": "NerSkullz Template for Men Development (Mongo, Express, Node)",
   "version": "1.0.0",
   "author": {
-    "name": "Madhusudhan Srinivasa",
-    "email": "me@madhums.me"
+    "name": "Pietro Di Marzo - NerdSkullz",
+    "email": "pietrodimarzo@gmail.com"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.5"
   },
   "scripts": {
     "start": "NODE_PATH=./config:./app/controllers NODE_ENV=development ./node_modules/.bin/nodemon server.js",
@@ -45,7 +45,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/madhums/node-express-mongoose.git"
+    "url": "git://github.com/NerdSkullz/menTemplate.git"
   },
   "keywords": [
     "mvc",
