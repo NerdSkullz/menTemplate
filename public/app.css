@@ -1,6 +1,10 @@
+/* IMPORT HERE ALL REQUIRED SASS FILES */
+/* HELPERS */
+/* MEASUREMENTS */
+/* INDEX STYLE */
 body {
-  font: 13px Helvetica, arial, freesans, clean, sans-serif;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
   line-height: 1.4;
   color: #333333;
-  background: #000;
-  padding: 50px; }
+  background: #fff;
+  padding: 3.125em; }

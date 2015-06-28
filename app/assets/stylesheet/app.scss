@@ -1,10 +1,4 @@
-$colorTest: #000;
+/* IMPORT HERE ALL REQUIRED SASS FILES */
 
-
-body {
-  font: 13px Helvetica, arial, freesans, clean, sans-serif;
-  line-height: 1.4;
-  color: #333333;
-  background: $colorTest;
-  padding: 50px;
-}
+  @import "helpers";
+  @import "index";
