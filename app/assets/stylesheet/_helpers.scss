@@ -1,10 +1,146 @@
-/* HELPERS */
+/*
+╔══════════════ ೋღ☃ღೋ ══════════════╗
 
-/* MEASUREMENTS */
+ ~ ~ ~ ~ ~ ~  HELPER STYLES  ~ ~ ~ ~ ~ ~
 
-$base-font-size: 16;
+╚══════════════ ೋღ☃ღೋ ══════════════╝
+*/
 
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) * 1em;
+
+/********************************************
+        BASE EM CALC
+********************************************/
+
+
+
+@function em($px, $base: 16) {
+  @return ($px / $base) * 1em;
 }
 
+
+/********************************************
+        MEDIA QUERIES
+********************************************/
+
+
+
+@mixin respond-to($media) {
+  @if $media == port-mob {
+    @media only screen and ( min-width: em( 320 ) ) { @content; }
+  }
+
+  @if $media == land-mob {
+    @media only screen and ( min-width: em( 480 ) ) { @content; }
+  }
+
+  @if $media == fablet {
+    @media only screen and ( min-width: em( 572 ) ) { @content; }
+  }
+
+  @if $media == tablet {
+    @media only screen and ( min-width: em( 768 ) ) { @content; }
+  }
+
+  @else if $media == netbook {
+    @media only screen and ( min-width: em( 1025 ) ) { @content; }
+  }
+
+  @else if $media == desktop {
+    @media only screen and ( min-width: em( 1200 ) ) { @content; }
+  }
+
+  @if $media == tablet-or-smaller {
+    @media only screen and ( max-width: em( 1024 ) ) { @content; }
+  }
+
+  @if $media == mobile-or-smaller {
+    @media only screen and ( max-width: em( 767 ) ) { @content; }
+  }
+
+}
+
+@mixin transition($property, $duration){
+  @include prefix( transition , #{$property} #{$duration} ease-in-out );
+}
+
+
+
+/********************************************
+        EXTENDER OBJECTS
+********************************************/
+
+%box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+%clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%ib {
+  display:inline-block;
+  vertical-align:top;
+  white-space: normal;
+
+  *display:inline;
+  zoom:1;
+}
+
+%ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%wrapper {
+  width:100%;
+  @extend %clearfix;
+}
+
+%content {
+  margin: 0 auto;
+  @extend %clearfix;
+  max-width:em(960);
+
+  @include respond-to(netbook){ }
+  @include respond-to(desktop){ max-width:em(1240); }
+}
+
+%middle-align {
+  &:before {
+    content:'';
+    height:100%;
+    margin-right:-0.3em;
+    vertical-align:middle;
+
+    @extend %ib;
+  }
+}
+
+/********************************************
+        DESKTOP / MOBILE REVEAL
+********************************************/
+
+.desktop {
+  display: none;
+}
+
+@include respond-to (netbook) {
+  .desktop {
+    display: inline-block !important;
+  }
+  .mobile {
+    display: none;
+  }
+}

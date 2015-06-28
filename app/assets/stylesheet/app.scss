@@ -1,4 +1,8 @@
 /* IMPORT HERE ALL REQUIRED SASS FILES */
 
-  @import "helpers";
-  @import "index";
+@import "reset";
+
+@import "helpers";
+@import "typography";
+
+@import "index";
