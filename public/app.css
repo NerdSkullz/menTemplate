@@ -101,3 +101,5 @@ body {
   color: #333333;
   background: #fff;
   padding: 3.125em; }
+  body h1 {
+    font-size: 1.625rem; }
