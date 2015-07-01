@@ -9,9 +9,7 @@ var fs = require('fs'),
     passport = require('passport'),
     config = require('config'),
     sass = require('node-sass'),
-    sassMiddleware = require('node-sass-middleware'),
-    assets = require('assets')
-    assetsMiddleware = require('assets-middleware');
+    sassMiddleware = require('node-sass-middleware');
 
 var app = module.exports = express();
 
@@ -49,19 +47,6 @@ require('./config/express')(app, passport);
 
 // Bootstrap routes
 require('./config/routes')(app, passport);
-
-// adding the js middleware
-// app.use(
-//    assetsMiddleware({
-//        src: __dirname + '/app/assets/javascript', 
-//        dest: __dirname + '/public/scripts.js',
-//        debug: true,       
-//    })
-// );
-app.get(__dirname + '/public/scripts.js', assetsMiddleware({
-    src: __dirname + '/app/assets/javascript', 
-    dest: __dirname + '/public/scripts.js'
-}));
 
 app.listen(port);
 console.log('Express app started on port ' + port);

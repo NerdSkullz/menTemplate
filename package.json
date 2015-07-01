@@ -40,8 +40,9 @@
     "passport-google-oauth": "latest",
     "passport-local": "latest",
     "passport-twitter": "latest",
-    "assets-middleware": "latest",
-    "assets": "latest"
+    "gulp" : "latest",
+    "gulp-concat" : "latest",
+    "gulp-nodemon" : "latest"
   },
   "devDependencies": {
     "nodemon": "latest",
