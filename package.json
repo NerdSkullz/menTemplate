@@ -35,7 +35,13 @@
     "view-helpers": "^0.1.5",
     "winston": "^0.8.0",
     "node-sass" : "latest",
-    "node-sass-middleware" : "latest"
+    "node-sass-middleware" : "latest",
+    "passport-facebook": "latest",
+    "passport-google-oauth": "latest",
+    "passport-local": "latest",
+    "passport-twitter": "latest",
+    "assets-middleware": "latest",
+    "assets": "latest"
   },
   "devDependencies": {
     "nodemon": "latest",
