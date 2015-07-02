@@ -6,4 +6,4 @@ $(document).ready(function(){
 })
 
 
-console.log("fuck yeah!")
+console.log("fuck yeah!!! This thing.... oooh THIS THING!!!!");

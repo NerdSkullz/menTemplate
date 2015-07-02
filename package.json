@@ -41,8 +41,7 @@
     "passport-local": "latest",
     "passport-twitter": "latest",
     "gulp" : "latest",
-    "gulp-concat" : "latest",
-    "gulp-nodemon" : "latest"
+    "gulp-concat" : "latest"
   },
   "devDependencies": {
     "nodemon": "latest",
