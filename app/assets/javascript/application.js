@@ -6,4 +6,4 @@ $(document).ready(function(){
 })
 
 
-console.log("fuck yeah!!! This thing.... oooh THIS THING!!!!");
+console.log("fuck yeah!!! This thing.... oooh THIS THING!!!! and Tara sucks btw!");

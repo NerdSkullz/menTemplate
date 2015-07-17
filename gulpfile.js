@@ -11,7 +11,11 @@ function runCommand(command) {
       cb(err);
     });
   }
-}    
+}
+
+gulp.task('watch', function() {
+  gulp.watch('./app/assets/javascript/*.js', ['scripts']);
+})    
 
 gulp.task('scripts', function() {
   return gulp.src(['app/assets/javascript/*.js'])
@@ -25,6 +29,6 @@ gulp.task('start-mongo', runCommand('mongod --dbpath /data/'));
 gulp.task('stop-mongo', runCommand('mongo --eval "use admin; db.shutdownServer();"'));
 gulp.task('start-app', runCommand('npm start'));
 
-gulp.task('default', ['start-mongo', 'start-app', 'scripts'] , function () {
-  gulp.watch('app/assets/javascript/*.js', ['scripts']);
+gulp.task('default', ['start-mongo', 'start-app', 'watch'] , function () {
+  
 })
