@@ -7,9 +7,10 @@ var fs = require('fs'),
     express = require('express'),
     mongoose = require('mongoose'),
     passport = require('passport'),
-    config = require('config'),
+    config = require('./config/config'),
     sass = require('node-sass'),
     sassMiddleware = require('node-sass-middleware');
+
 
 var app = module.exports = express();
 

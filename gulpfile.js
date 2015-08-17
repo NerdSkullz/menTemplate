@@ -26,7 +26,6 @@ gulp.task('scripts', function() {
 // Start MongoDb
 
 gulp.task('start-mongo', runCommand('mongod --dbpath /data/'));
-gulp.task('stop-mongo', runCommand('mongo --eval "use admin; db.shutdownServer();"'));
 gulp.task('start-app', runCommand('npm start'));
 
 gulp.task('default', ['start-mongo', 'start-app', 'watch'] , function () {
